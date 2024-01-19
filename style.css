@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+/* =================
+Navbar 
+=================== */
+#navbar {
+    background: #f9f9f9;
+}
+#logo{
+    font-size: 36px;
+    font-weight: 550;
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+#logo span{
+    color: #ffa500;
+}
+.navbar-toggler span{
+    color: #ffa500;
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 650;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background: #ffa500;
+    color: #fff;
+}
+#navbar form button{
+    background: #ffa500;
+    color: #fff;
+    border: none;
+}
+
+/* =================
+    Home Section 
+=================== */
+.home{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(./images/background-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home .container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+}
+.home .container h1{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 500;
+    text-shadow: 0 1px 1px #000;
+}
+.home .container .change-content::after{
+    content: ' ';
+    color: #ffa500;
+    text-shadow: 0 1px 1px #000;
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext {
+    0%{content: "France";}
+    10%{content: "Spain";}
+    20%{content: "United States";}
+    30%{content: "China";}
+    40%{content: "India";}
+    50%{content: "Pakistan";}
+    60%{content: "Italy";}
+    70%{content: "Turkey";}
+    80%{content: "Mexico";}
+    90%{content: "Germany";}
+    100%{content: "United Kingdom";}
+}
+.home .container h5{
+    color: #fff;
+    font-size: 70px;
+    font-weight: 650;
+    text-shadow: 0 1px 1px #000;
+    margin-top: 5px;
+}
+.home .container p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0 1px 1px #000;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.home .container a{
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 650;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.home .container a:hover{
+    background-color: #ffa500;
+    color: #fff;
+}
+@media(max-width:850px){
+    .home{
+        height: auto;
+        background-position: 50%;
+    }
+    .home .container {
+        padding-bottom: 50px;
+    }
+}
+@media(max-width:450px){
+    .home .container h1{
+        font-size: 25px;
+    }
+    .home .container h5{
+        font-size: 38px;
+    }
+    .home .container p{
+        font-size: 13px;
+    }
+}
+
+/* =================
+    Book Section 
+=================== */
+.book{
+    background: #fff;
+    padding: 50px;
+}
+
+.book .main-text h1{
+    text-align: center;
+    text-shadow: 0 1px 1px #000;   
+    font-weight: 600; 
+}
+.book .main-text h1 span{
+    color: #ffa500;
+}
+.book .row{
+    margin-top: 30px;
+}
+.book .card{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px -6px #ffa500;
+}
+
+.book form input{
+    padding: 10px;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px -6px #000;
+}
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0 5px 5px -6px #000;
+    height: 200px;
+}
+.book form .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: #ffa500;
+    color: #fff;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.book form .submit:hover{
+    width: 170px; 
+}
+@media(max-width:760px){
+    .book{
+        padding: 0;
+    }
+    .book .main-text h1{
+        padding: 20px;
+    }
+}
+
+/* =================
+    Packages Section 
+=================== */
+.packages .main-text h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.packages .main-text h1 span{
+    color: #ffa500;
+}
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    transition: 1s linear;
+}
+.packages .card:hover{
+    transform: scale(1.1);
+}
+.packages .card img{
+    border-radius: 5px;
+}
+.packages .card .card-body{
+    background: transparent;
+}
+.packages .card .card-body h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+.packages .card .card-body p{
+   font-size: 15px; 
+}
+.packages .star i{
+    font-size: 15px;
+}
+.packages .checked{
+    color: #ffa500;
+}
+.packages .card .card-body h6{
+    font-size: 20px;
+}
+.packages .card .card-body a{
+    padding: 8px;
+    text-decoration: none;
+    background: #ffa500;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* =================
+    Services Section 
+=================== */
+.services{
+    padding: 30px 0 70px 0;
+    margin-top: 50px;
+}
+.services .main-text h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.services .main-text h1 span{
+    color: #ffa500;
+}
+.services .card{
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    border: none;
+    cursor: pointer;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: #ffa500;
+    margin-top: 20px;
+}
+.services .card .card-body{
+    text-align: center;
+}
+.services .card .card-body h3{
+    font-weight: 600;
+}
+
+/* =================
+    Gallery Section 
+=================== */
+.gallery{
+    margin-top: 50px;
+}
+.gallery .main-text h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.gallery .main-text h1 span{
+    color: #ffa500;
+}
+.gallery .card{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    cursor: pointer;
+}
+.gallery .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallery .card img:hover{
+   transform: scale(1.1); 
+}
+
+/* =================
+    About Us Section 
+=================== */
+.about{
+    padding: 50px;
+    margin-top: 50px;
+}
+.about .main-text h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.about .main-text h1 span{
+    color: #ffa500;
+}
+.about .row h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about .row p{
+    font-weight: 500;
+}
+.about .row #about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #ffa500;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.about .row #about-btn:hover{
+    width: 170px;
+}
+
+@media(max-width:760px){
+    .about{
+        padding: 0;
+    }
+}
+
+/* =================
+   Footer Section 
+=================== */
+#footer{
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: #f9f9f9;
+}
+#footer h1{
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: 0 0 1px #000;
+}
+#footer h1 span{
+    color: #ffa500;
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: #000;
+    color: #fff;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background: #ffa500;
+    transform: scale(1.1)
+}
